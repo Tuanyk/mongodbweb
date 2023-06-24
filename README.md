@@ -12,9 +12,13 @@ DatabaseName and CollectionName can be anything, it's your taste, I will not tal
 The important thing here is what is inside document, which fields are required!
 
 document
+
     *_id* (of course, it's auto generated, you dont need to care about that)
+
     *categories*: Array (an array of category this post belong to)
+
     *title_{langA}_{langB}: this is a field contain the title translated from langA to langB, for example *title_en_vi*
+    
     *final_html_{langA}_{langB}*: same as above, this contain the html of the post, but is customized for specific need. Think about it as the post_content field of wordpress. It's just a name, nothing special!
 
 
