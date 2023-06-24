@@ -16,3 +16,40 @@ document
     *categories*: Array (an array of category this post belong to)
     *title_{langA}_{langB}: this is a field contain the title translated from langA to langB, for example *title_en_vi*
     *final_html_{langA}_{langB}*: same as above, this contain the html of the post, but is customized for specific need. Think about it as the post_content field of wordpress. It's just a name, nothing special!
+
+
+# Nginx Config
+
+I use Docker to run php on a container named `php`, it exposes the port 9000. You should check and change the config to match your setup.
+
+Pay attention to places with **yourwebsite.com**, you must replace `yourwebsite.com` with your destination domain.
+
+```
+server {
+    listen       80;
+    listen  [::]:8080;
+
+    server_name  yourwebsite.com www.yourwebsite.com;
+    access_log /var/log/nginx/yourwebsite.com.access.log;
+    error_log /var/log/nginx/yourwebsite.com.error.log;
+
+    index index.html index.php;
+    root   /var/www/yourwebsite.com;
+
+    location ~* \.(ico|css|js|gif|jpe?g|png)(\?[0-9]+)?$ {
+        expires max;
+        log_not_found off;
+    }
+
+    location / {
+        index index.html index.php;
+        try_files $uri $uri/ /index.php?$args;
+    }
+    location ~ \.php$ {
+        include fastcgi_params;
+        fastcgi_pass php:9000;
+        fastcgi_index index.php;
+        fastcgi_param SCRIPT_FILENAME $document_root/$fastcgi_script_name;
+    }
+}
+```
