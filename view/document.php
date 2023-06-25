@@ -1,0 +1,1 @@
+<?= $document["translated_html_$site_lang"]; ?>

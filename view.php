@@ -1,23 +1,24 @@
 <?php
 
 function home_view() {    
-    global $leodb;
-    $db_names = $leodb->listDatabaseNames();
+    global $leodb, $database_name, $collection_name, $site_lang;
+    $collection = $leodb->selectDatabase($database_name)->selectCollection($collection_name);
+    $documents = $collection->find(["translated_html_$site_lang" => ['$exists'=> true,'$ne'=>'']], ['limit'=>10]);
     include __DIR__.'/view/home.php';
 
 }
 
-function category_view(string $database_name, string $collection_name) {
-    global $leodb;
+function category_view(string $category) {
+    global $leodb, $database_name, $collection_name;
     $collection = $leodb->selectDatabase($database_name)->selectCollection($collection_name);
     $documents = $collection->find();
-    include __DIR__.'/view/collection.php';
+    include __DIR__.'/view/category.php';
 }
 
-function document_view(string $database_name, string $collection_name, string $object_id) {
-    global $leodb;
+function document_view(string $slug) {
+    global $leodb, $database_name, $collection_name, $site_lang;
     $collection = $leodb->selectDatabase($database_name)->selectCollection($collection_name);
-    $document = $collection->findOne(['_id'=>new \MongoDB\BSON\ObjectId($object_id)]);
+    $document = $collection->findOne(['slug'=>$slug]);
     $field_names = array_keys((array) $document);
     include __DIR__.'/view/document.php';
     
