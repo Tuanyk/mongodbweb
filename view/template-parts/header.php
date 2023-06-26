@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?= isset($title) ? $title : $_SERVER['HTTP_HOST']; ?></title>
     <meta name="description" content="<?= isset($description) ? $description : ''; ?>">
+    <link rel="canonical" href="<?= isset($canonical_url) ? $canonical_url : $site_url; ?>" />
 
     <link href="/static/css/bootstrap.min.css" rel="stylesheet">
     <script src="/static/js/bootstrap.bundle.min.js"></script>
