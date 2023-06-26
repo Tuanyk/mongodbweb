@@ -19,8 +19,11 @@ document
 
     *title_{langA}_{langB}: this is a field contain the title translated from langA to langB, for example *title_en_vi*
     
-    *final_html_{langA}_{langB}*: same as above, this contain the html of the post, but is customized for specific need. Think about it as the post_content field of wordpress. It's just a name, nothing special!
+    *translated_html_{langA}_{langB}*: same as above, this contain the html of the post, but is customized for specific need. Think about it as the post_content field of wordpress. It's just a name, nothing special!
 
+Updated 26.6.2023:
+
+I have changed my mind. This will be multi-language site.
 
 # Nginx Config
 
