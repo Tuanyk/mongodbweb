@@ -8,7 +8,7 @@
         <?php 
             $html = $document["translated_html_$site_lang"]; 
             $dom = new DOMDocument();
-            $dom->loadHTML('<?xml encoding="UTF-8">' . $html);
+            @$dom->loadHTML('<?xml encoding="UTF-8">' . $html);
             $image_tags = $dom->getElementsByTagName('img');
             foreach ($image_tags as $image_tag) {
                 $src = $image_tag->getAttribute('src');
