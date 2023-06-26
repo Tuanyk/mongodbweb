@@ -1,9 +1,11 @@
 <?php
 
 function home_view() {    
-    global $leodb, $database_name, $collection_name, $site_lang;
+    global $leodb, $database_name, $collection_name, $site_lang, $site_title, $site_desc;
     $collection = $leodb->selectDatabase($database_name)->selectCollection($collection_name);
     $documents = $collection->find(["translated_html_$site_lang" => ['$exists'=> true,'$ne'=>'']], ['limit'=>10]);
+    $title = $site_title;
+    $description = $site_desc;
     include __DIR__.'/view/home.php';
 
 }
