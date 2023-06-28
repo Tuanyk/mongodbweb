@@ -122,59 +122,21 @@
                 <div class="tab-content" id="myTabContent">
                     <div class="tab-pane fade show active" id="design-tab-pane" role="tabpanel" aria-labelledby="design-tab" tabindex="0">
                         <div class="row">
-                            <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-0">
+
+                            <?php foreach ($site_info['metadata'] as $k=>$v): ?>
+                            <div class="col-lg-4 col-md-6 col-12 mb-4">
                                 <div class="custom-block bg-white shadow-lg">
-                                    <a href="#">
+                                    <a href="<?= url_for_home_lang($k); ?>">
                                         <div class="d-flex">
                                             <div>
-                                                <h5 class="mb-2">Web Design</h5>
-
-                                                <p class="mb-0">Topic Listing Template based on Bootstrap 5</p>
+                                                <h5 class="mb-2"><?= $v['title']; ?></h5>
+                                                <p class="mb-0"><?= $v['description']; ?></p>
                                             </div>
-
-                                            <span class="badge bg-design rounded-pill ms-auto">14</span>
                                         </div>
-
-                                        <img src="/static/images/topics/undraw_Remote_design_team_re_urdx.png" class="custom-block-image img-fluid" alt="">
                                     </a>
                                 </div>
                             </div>
-
-                            <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-0">
-                                <div class="custom-block bg-white shadow-lg">
-                                    <a href="#">
-                                        <div class="d-flex">
-                                            <div>
-                                                <h5 class="mb-2">Graphic</h5>
-
-                                                    <p class="mb-0">Lorem Ipsum dolor sit amet consectetur</p>
-                                            </div>
-
-                                            <span class="badge bg-design rounded-pill ms-auto">75</span>
-                                        </div>
-
-                                        <img src="/static/images/topics/undraw_Redesign_feedback_re_jvm0.png" class="custom-block-image img-fluid" alt="">
-                                    </a>
-                                </div>
-                            </div>
-
-                            <div class="col-lg-4 col-md-6 col-12">
-                                <div class="custom-block bg-white shadow-lg">
-                                    <a href="#">
-                                        <div class="d-flex">
-                                            <div>
-                                                <h5 class="mb-2">Logo Design</h5>
-
-                                                    <p class="mb-0">Lorem Ipsum dolor sit amet consectetur</p>
-                                            </div>
-
-                                            <span class="badge bg-design rounded-pill ms-auto">100</span>
-                                        </div>
-
-                                        <img src="/static/images/topics/colleagues-working-cozy-office-medium-shot.png" class="custom-block-image img-fluid" alt="">
-                                    </a>
-                                </div>
-                            </div>
+                            <?php endforeach; ?>
                         </div>
                     </div>
 
@@ -302,19 +264,6 @@
                     </div>
                 </div>
             </section>
-`
-
-<div class="container mt-3">
-    <?php foreach ($languages as $l): ?>
-
-        <div class="article card bg-light mb-3">
-            <div class="card-body">
-                <a href="/<?= $l; ?>"><h2 class="card-title">Version: <?= $l; ?></h2></a>
-            </div>
-        </div>
-
-    <?php endforeach; ?>
-</div>
 
 
 <?php include __DIR__.'/template-parts/footer.php'; ?>
