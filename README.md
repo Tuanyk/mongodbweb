@@ -1,6 +1,6 @@
 # MyWebsite
 
-You can see it here: [vanchuyenqt.com](vanchuyenqt.com)
+You can see it here: [https://vanchuyenqt.com](https://vanchuyenqt.com)
 
 First, rename database_sample.php to database.php, and replace your mongodb login string to match your setup.
 
