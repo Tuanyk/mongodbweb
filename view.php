@@ -1,12 +1,22 @@
 <?php
 
-function home_lang_view(string $lang) {
+function view_404() {
+    header('HTTP/1.0 404 Not Found');
+}
+
+function home_lang_view(string $lang, int $page = 1) {
     global $leodb, $database_name, $collection_name, $site_info;
+    $per_page = 10;
+    $skip = ($page-1) * $per_page;
     $collection = $leodb->selectDatabase($database_name)->selectCollection($collection_name);
-    $documents = $collection->find(["translated_html_en_$lang" => ['$exists'=> true,'$ne'=>'']], ['limit'=>10]);
+    $all_documents_count = iterator_count($collection->find(["translated_html_en_$lang" => ['$exists'=> true,'$ne'=>'']]));
+    $total_pages = (int)($all_documents_count/$per_page);
+    if ($all_documents_count%$per_page!=0) $total_pages++;
+
+    $documents = $collection->find(["translated_html_en_$lang" => ['$exists'=> true,'$ne'=>'']], ['skip'=>$skip,'limit'=>10])->toArray();
     $title = $site_info['metadata'][$lang]['title'];
     $description = $site_info['metadata'][$lang]['description'];
-    $canonical_url = $site_info['site_url'] . '/' . $lang;
+    $canonical_url = url_for_home_lang($lang, $page);
     include __DIR__.'/view/home_lang.php';
 }
 
@@ -27,7 +37,7 @@ function document_view(string $lang, string $slug) {
     $field_names = array_keys((array) $document);
     $title = $document['title'];
     $description = $document["title_en_$lang"];
-    $canonical_url = $site_info['site_url'].'/p/'.$lang.'/'.$document['slug'];
+    $canonical_url = url_for_document($lang, $slug);
     include __DIR__.'/view/document.php';
     
 }

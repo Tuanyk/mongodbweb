@@ -38,7 +38,7 @@
                                     <h5 class="mb-2"><?= $document["title"];?></h5>
 
                                     <p class="mb-0"><?= $document["title_en_$lang"];?></p>
-
+                                    <p>Categories: <?= implode(', ', (array)$document['categories']); ?></p>
                                     <a href="/p/<?= $lang; ?>/<?= $document['slug'];?>" class="btn custom-btn mt-3 mt-lg-4">Learn More...</a>
                                 </div>
                             </div>
@@ -50,37 +50,39 @@
             <div class="col-lg-12 col-12">
                 <nav aria-label="Page navigation example">
                     <ul class="pagination justify-content-center mb-0">
+
                         <li class="page-item">
-                            <a class="page-link" href="#" aria-label="Previous">
+                            <a class="page-link" href="<?= ($page>1) ? url_for_home_lang($lang, $page-1) : '#' ;?>" aria-label="Previous">
                                 <span aria-hidden="true">Prev</span>
                             </a>
                         </li>
 
+                        <?php for($i=$page-2; $i>=0;$i++): ?>
+                            <?php if ($i >= $page) break; ?>
+                            <?php if ($i == 0) continue; ?>
+                                <li class="page-item">
+                                    <a class="page-link" href="<?= url_for_home_lang($lang, $i); ?>"><?= $i; ?></a>
+                                </li>
+                        <?php endfor; ?>
+
                         <li class="page-item active" aria-current="page">
-                            <a class="page-link" href="#">1</a>
+                            <a class="page-link" href="#"><?= $page; ?></a>
                         </li>
                         
-                        <li class="page-item">
-                            <a class="page-link" href="#">2</a>
-                        </li>
-                        
-                        <li class="page-item">
-                            <a class="page-link" href="#">3</a>
-                        </li>
+                        <?php for($i=$page+1; $i<=$total_pages; $i++): ?>
+                            <?php if ($i > $page + 2) break; ?>
+                                <li class="page-item">
+                                    <a class="page-link" href="<?= url_for_home_lang($lang, $i); ?>"><?= $i; ?></a>
+                                </li>
+                        <?php endfor; ?>
 
-                        <li class="page-item">
-                            <a class="page-link" href="#">4</a>
-                        </li>
-
-                        <li class="page-item">
-                            <a class="page-link" href="#">5</a>
-                        </li>
                         
                         <li class="page-item">
-                            <a class="page-link" href="#" aria-label="Next">
+                            <a class="page-link" href="<?= ($page<$total_pages) ? url_for_home_lang($lang, $page+1) : '#' ;?>" aria-label="Next">
                                 <span aria-hidden="true">Next</span>
                             </a>
                         </li>
+                        
                     </ul>
                 </nav>
             </div>

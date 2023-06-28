@@ -11,3 +11,15 @@ function get_html_lang(string $object_id) {
         echo "Nothing Found!";
     }
 }
+
+function url_for_home_lang(string $lang, int $page = 1) {
+    $url = '/'.$lang;
+    $page = (int)$page;
+    if ($page > 1) $url = $url . '/' . $page;
+    return $url;
+}
+
+function url_for_document(string $lang, string $slug) {
+    $url = '/p/'.$lang.'/'.$slug;
+    return $url;
+}
