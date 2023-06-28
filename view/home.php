@@ -35,12 +35,11 @@
                     <a href="#">
                         <div class="d-flex">
                             <div>
-                                <h5 class="mb-2">Web Design</h5>
+                                <h5 class="mb-2">Wiki</h5>
 
-                                <p class="mb-0">When you search for free CSS templates, you will notice that TemplateMo is one of the best websites.</p>
+                                <p class="mb-0">We are convinced that individuals possess an inherent desire to lend a hand. Hence, taking inspiration from Wikipedia, VanchuyenQT is a wiki platform that operates in your native language and serves as a resource to assist others in making informed choices.</p>
                             </div>
 
-                            <span class="badge bg-design rounded-pill ms-auto">14</span>
                         </div>
 
                         <img src="/static/images/topics/undraw_Remote_design_team_re_urdx.png" class="custom-block-image img-fluid" alt="">
@@ -55,34 +54,12 @@
 
                         <div class="custom-block-overlay-text d-flex">
                             <div>
-                                <h5 class="text-white mb-2">Finance</h5>
+                                <h5 class="text-white mb-2">Comparision</h5>
 
-                                <p class="text-white">Topic Listing Template includes homepage, listing page, detail page, and contact page. You can feel free to edit and adapt for your CMS requirements.</p>
+                                <p class="text-white">We are of the opinion that simplifying the process of making appropriate decisions ought to be more straightforward than its present complexity. We hold the view that achieving this objective is attainable by offering unbiased, cost-free, succinct, and comprehensible information. We strive to establish a convenient hub where such information can be accessed in a single location.</p>
 
-                                <a href="#" class="btn custom-btn mt-2 mt-lg-3">Learn More</a>
                             </div>
 
-                            <span class="badge bg-finance rounded-pill ms-auto">25</span>
-                        </div>
-
-                        <div class="social-share d-flex">
-                            <p class="text-white me-4">Share:</p>
-
-                            <ul class="social-icon">
-                                <li class="social-icon-item">
-                                    <a href="#" class="social-icon-link bi-twitter"></a>
-                                </li>
-
-                                <li class="social-icon-item">
-                                    <a href="#" class="social-icon-link bi-facebook"></a>
-                                </li>
-
-                                <li class="social-icon-item">
-                                    <a href="#" class="social-icon-link bi-pinterest"></a>
-                                </li>
-                            </ul>
-
-                            <a href="#" class="custom-icon bi-bookmark ms-auto"></a>
                         </div>
 
                         <div class="section-overlay"></div>
@@ -220,13 +197,13 @@
                                 <div class="accordion-item">
                                     <h2 class="accordion-header" id="headingOne">
                                         <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                        What is Topic Listing?
+                                        What is this website about?
                                         </button>
                                     </h2>
 
                                     <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                                         <div class="accordion-body">
-                                            Topic Listing is free Bootstrap 5 CSS template. <strong>You are not allowed to redistribute this template</strong> on any other template collection website without our permission. Please contact TemplateMo for more detail. Thank you.
+                                        VanchuyenQT is an expansive website that offers a diverse array of comparisons in multiple languages, catering to the innate curiosity of individuals. It serves as a valuable resource, providing comprehensive information on various subjects, allowing users to delve deeper into topics of interest. Whether it's comparing products, services, or even concepts, VanchuyenQT empowers people to expand their knowledge and make more informed decisions. With its user-friendly interface and extensive database, the website enables individuals to satisfy their curiosity and gain a deeper understanding of the world around them.
                                         </div>
                                     </div>
                                 </div>
@@ -240,7 +217,7 @@
 
                                     <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
                                         <div class="accordion-body">
-                                            You can search on Google with <strong>keywords</strong> such as templatemo portfolio, templatemo one-page layouts, photography, digital marketing, etc.
+                                            You can search on Google with <strong>keywords</strong> such as vanchuyenqt.com, wordpress.org vs wordpress.com, etc.
                                         </div>
                                     </div>
                                 </div>
@@ -248,13 +225,13 @@
                                 <div class="accordion-item">
                                     <h2 class="accordion-header" id="headingThree">
                                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                        Does it need to paid?
+                                        Is it free?
                                     </button>
                                     </h2>
 
                                     <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
                                         <div class="accordion-body">
-                                            You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                                        Yes, absolutely! VanchuyenQT operates on a completely free basis. Users can access all the features, comparisons, and information available on the website without any cost. There are no hidden charges or subscription fees involved. VanchuyenQT firmly believes in providing free and unrestricted access to knowledge, ensuring that everyone can benefit from the valuable resources and insights available on the platform. So rest assured, exploring and utilizing the services provided by VanchuyenQT comes at no expense to you.
                                         </div>
                                     </div>
                                 </div>
