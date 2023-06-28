@@ -14,8 +14,8 @@ function home_view() {
     global $leodb, $database_name, $collection_name, $site_info;
     $collection = $leodb->selectDatabase($database_name)->selectCollection($collection_name);
 
-    $title = "Hello World";
-    $description = "This is Home!";
+    $title = "VCQT";
+    $description = "The Knowledge Carrier";
     $canonical_url = $site_info['site_url'];
     include __DIR__.'/view/home.php';
 }
