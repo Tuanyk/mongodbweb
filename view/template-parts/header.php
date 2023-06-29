@@ -37,31 +37,31 @@
 <body id="top">
 <main>
 <div id="sticky-wrapper" class="sticky-wrapper"><nav class="navbar navbar-expand-lg">
-                <div class="container">
-                    <a class="navbar-brand" href="/">
-                        <i class="bi-back"></i>
-                        <span><?= $site_info['site_name']; ?></span>
-                    </a>
+    <div class="container">
+        <a class="navbar-brand" href="/">
+            <i class="bi-back"></i>
+            <span><?= $site_info['site_name']; ?></span>
+        </a>
 
-                    <div class="d-lg-none ms-auto me-4">
-                        <a href="#top" class="navbar-icon bi-arrow-up smoothscroll"></a>
-                    </div>
-    
-                    <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-    
-                    <div class="navbar-collapse collapse" id="navbarNav">
-                        <ul class="navbar-nav ms-lg-5 me-lg-auto">
-                            <li class="nav-item">
-                                <a class="nav-link click-scroll active" href="/">Home</a>
-                            </li>
+        <div class="d-lg-none ms-auto me-4">
+            <a href="#top" class="navbar-icon bi-arrow-up smoothscroll"></a>
+        </div>
 
-                        </ul>
+        <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
 
-                        <div class="d-none d-lg-block">
-                            <a href="#top" class="navbar-icon bi-arrow-up smoothscroll"></a>
-                        </div>
-                    </div>
-                </div>
-            </nav></div>
+        <div class="navbar-collapse collapse" id="navbarNav">
+            <ul class="navbar-nav ms-lg-5 me-lg-auto">
+                <li class="nav-item">
+                    <a class="nav-link click-scroll active" href="/">Home</a>
+                </li>
+
+            </ul>
+
+            <div class="d-none d-lg-block">
+                <a href="#top" class="navbar-icon bi-arrow-up smoothscroll"></a>
+            </div>
+        </div>
+    </div>
+</nav></div>
