@@ -5,46 +5,57 @@ $leodb = new \MongoDB\Client("mongodb://username:password@host:port");
 
 $database_name = 'database_name';
 $collection_name = 'collection_name';
+
 $site_metadata = [
     'vi' => [
-        'title'=>'Vi HomePage Title',
-        'description'=>'HomePage Description',
+        'title'=>'Người vận chuyển kiến thức',
+        'description'=>'Truy cập phiên bản Website được viết bằng Tiếng Việt',
+        'language'=>'Vietnamese',
     ],
     'it' => [
-        'title'=>'It HomePage Title',
-        'description'=>'HomePage Description',
+        'title'=>'Il trasportatore della conoscenza',
+        'description'=>'Accedi alla versione del sito web scritta in italiano',
+        'language'=>'Italian',
     ],
     'fr' => [
-        'title'=>'Fr HomePage Title',
-        'description'=>'HomePage Description',
+        'title'=>'Le porteur de connaissance',
+        'description'=>'Accédez à la version du site web écrite en français',
+        'language'=>'French',
     ],
     'de' => [
-        'title'=>'De HomePage Title',
-        'description'=>'HomePage Description',
+        'title'=>'Der Wissensüberträger',
+        'description'=>'Zugriff auf die Version der Website, die in Deutsch geschrieben is',
+        'language'=>'Deutsch',
     ],
     'ja' => [
-        'title'=>'Ja HomePage Title',
-        'description'=>'HomePage Description',
+        'title'=>'知識のキャリア',
+        'description'=>'日本語で書かれたウェブサイトのバージョンにアクセスする',
+        'language'=>'Japanese',
     ],
     'pt' => [
-        'title'=>'Pt HomePage Title',
-        'description'=>'HomePage Description',
+        'title'=>'O portador do conhecimento',
+        'description'=>'Acesse a versão do site escrita em português',
+        'language'=>'Portuguese',
     ],
     'fi' => [
-        'title'=>'Fi HomePage Title',
-        'description'=>'HomePage Description',
+        'title'=>'Tiedon kantaja',
+        'description'=>'Pääse käsiksi suomenkieliseen verkkosivuston versioon',
+        'language'=>'Finnish',
     ],
     'ar' => [
-        'title'=>'Ar HomePage Title',
-        'description'=>'HomePage Description',
+        'title'=>'حامل المعرفة',
+        'description'=>'الوصول إلى نسخة الموقع المكتوبة باللغة العربية',
+        'language'=>'Arabic',
     ],
     'es' => [
-        'title'=>'Es HomePage Title',
-        'description'=>'HomePage Description',
+        'title'=>'El portador del conocimiento',
+        'description'=>'Accede a la versión del sitio web escrita en español',
+        'language'=>'Spanish',
     ],
     'ko' => [
-        'title'=>'Ko HomePage Title',
-        'description'=>'HomePage Description',
+        'title'=>'지식을 전달하는 사람',
+        'description'=>'한국어로 작성된 웹사이트 버전에 접속하세요',
+        'language'=>'Korean',
     ],
 ];
 
@@ -62,5 +73,5 @@ $site_url = $scheme.'://'.$_SERVER['HTTP_HOST'];
 $site_info = [
     'metadata' => $site_metadata,
     'site_url' => $site_url,
-    'site_name' => 'VanChuyenQT',
+    'site_name' => 'VCQT',
 ];
