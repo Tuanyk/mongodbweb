@@ -70,7 +70,7 @@ function category_view(string $lang, string $category, int $page) {
     $total_pages = (int)($all_documents_count/$per_page);
     if ($all_documents_count%$per_page!=0) $total_pages++;
 
-    $documents = $collection->find($query_filter, ['skip'=>$skip,'limit'=>10])->toArray();
+    $documents = $collection->find($query_filter, ['skip'=>$skip,'limit'=>$per_page])->toArray();
     if (count($documents) == 0) view_404();
     $title = $category.' - page '.$page;
     $description = 'Category '. $category .' posts';
