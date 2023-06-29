@@ -28,6 +28,9 @@
             max-width: 100%;
             display: block;
         }
+        .category-post-card li.breadcrumb-item a:hover {
+            color: #0d6efd;
+        }
     </style>
 
 </head>

@@ -31,7 +31,7 @@
 
             <div class="col-lg-8 col-12 mt-3 mx-auto">
                 <?php foreach ($documents as $document): ?>
-                    <div class="custom-block custom-block-topics-listing bg-white shadow-lg mb-5">
+                    <div class="custom-block custom-block-topics-listing bg-white shadow-lg mb-5 category-post-card">
                         <div class="d-flex">
                             <div class="custom-block-topics-listing-info d-flex">
                                 <div>
