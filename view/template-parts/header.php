@@ -13,6 +13,8 @@
     <link href="/static/css/bootstrap-icons.css" rel="stylesheet">
     <link href="/static/css/templatemo-topic-listing.css" rel="stylesheet">
 
+    <?= isset($header_html) ? $header_html : '' ; ?>
+    
     <style>
         table {
             width: 100%;
