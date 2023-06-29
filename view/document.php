@@ -19,12 +19,7 @@
 
             <div class="col-lg-5 col-12 mb-5">
                 <nav aria-label="breadcrumb">
-                    <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="/">Homepage</a></li>
-                        <?php foreach ($document['categories'] as $category): ?>
-                            <li class="breadcrumb-item active"><?= $category; ?></li>
-                        <?php endforeach; ?>
-                    </ol>
+                    <?= echo_document_category($document, $lang); ?>
                 </nav>
 
                 <h2 class="text-white"><?= $document['title']; ?></h2>
