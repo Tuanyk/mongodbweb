@@ -51,6 +51,17 @@
         <div class="row">
 
             <div class="col-lg-8 col-12 m-auto">
+                <div class="text-center mb-3">
+                    <div class="dropdown">
+                        <button class="btn dropdown-toggle" type="button" style="background-color: #80d0c7;" data-bs-toggle="dropdown" aria-expanded="false">Choose Language</button>
+
+                        <ul class="dropdown-menu">
+                            <?php foreach ($alternate_languages as $k=>$v): ?>
+                                <li><button class="dropdown-item" type="button"><?= $v; ?></button></li>
+                            <?php endforeach; ?>
+                        </ul>
+                    </div>
+                </div>
                 <div class="content">
                     <h2 class="subtitle"><?= $document["title_en_$lang"]; ?></h2>
                     <?= $html; ?>

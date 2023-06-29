@@ -41,7 +41,7 @@
                     </a>
 
                     <div class="d-lg-none ms-auto me-4">
-                        <a href="#top" class="navbar-icon bi-person smoothscroll"></a>
+                        <a href="#top" class="navbar-icon bi-arrow-up smoothscroll"></a>
                     </div>
     
                     <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">

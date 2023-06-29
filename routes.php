@@ -18,9 +18,7 @@ $router->get('/p/([^/]+)/([^/]+)', function($lang, $obj_id) {
     document_view($lang, $obj_id);
 });
 
-$router->get('/test', function() {
-    url_for(['for'=>'home']);
-});
+
 
 
 $router->run();

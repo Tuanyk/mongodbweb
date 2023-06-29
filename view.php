@@ -38,11 +38,15 @@ function document_view(string $lang, string $slug) {
     $title = $document['title'];
     $description = $document["title_en_$lang"];
     $canonical_url = url_for_document($lang, $slug);
-    $header_html = '';
+    $alternate_languages = [];
     foreach ($site_info['metadata'] as $k=>$v) {
         if ($document->offsetExists("translated_html_en_$k") && $document["translated_html_en_$k"] != '') {
-            $header_html .= '<link rel="alternate" hreflang="'.$k.'" href="'.url_for_document($k, $slug).'"/>';
+            $alternate_languages[$k] = $site_info['metadata'][$k]['language'];
         }
+    }
+    $header_html = '';
+    foreach ($alternate_languages as $k=>$fl) {
+        $header_html .= '<link rel="alternate" hreflang="'.$k.'" href="'.url_for_document($k, $slug).'"/>';
     }
 
     include __DIR__.'/view/document.php';
