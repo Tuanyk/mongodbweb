@@ -34,7 +34,7 @@ function url_for_category(string $lang, string $category, int $page = 1) {
 function echo_document_category($document, $lang) {
     $html = '<ol class="breadcrumb my-3">';
     foreach ($document['categories'] as $category) {
-        $html .= '<li class="breadcrumb-item"><a href="'.url_for_category($lang, $category, 1).'" class="rounded link-primary shadow-sm px-3 py-1">'.$category.'</a></li>';
+        $html .= '<li class="breadcrumb-item"><a href="'.url_for_category($lang, $category, 1).'">'.$category.'</a></li>';
     }
     $html .= '</ol>';
     return $html;
