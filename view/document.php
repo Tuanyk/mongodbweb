@@ -57,7 +57,7 @@
 
                         <ul class="dropdown-menu">
                             <?php foreach ($alternate_languages as $k=>$v): ?>
-                                <li><button class="dropdown-item" type="button"><?= $v; ?></button></li>
+                                <li><a href="<?= url_for_document($k, $slug); ?>" class="dropdown-item" type="button"><?= $v; ?></a></li>
                             <?php endforeach; ?>
                         </ul>
                     </div>
